@@ -1,9 +1,6 @@
 
-### 👨‍💻: About Me :
-- :telescope: I am a frontend developer, I like to create 
-Web applications, participate in development and see the result of my work..
-
-- :zap: In my free time, I read articles and develop my programming skills.
+### 💻: About this project:
+- :telescope: Use standalone components, web-component, the skills of building the project architecture are formed.
 
 - :mailbox:How to reach me: [![Telegram Badge](https://img.shields.io/badge/-Telegram-blue?style=flat&logo=Telegram&logoColor=white)](https://t.me/AlikPivnenko)
 ---
