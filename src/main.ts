@@ -1,12 +1,24 @@
 import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { provideRouter, Routes } from '@angular/router';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+
+
+const routes = [
+  {
+    path: 'feedback-and-chat',
+    loadComponent: () =>
+      import('./components/feedback-and-chat/feedback-and-chat.component').then(({ FeedbackAndChatComponent }) => FeedbackAndChatComponent),
+  }
+]
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes)
+  ]
+}).catch(error => console.log(error));
