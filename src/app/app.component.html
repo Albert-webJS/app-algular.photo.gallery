@@ -3,7 +3,7 @@
   <h2>Nature, photos of amazing places!</h2>
   <section>
     <section class="row">
-      <div class="column">
+      <!-- <div class="column"> -->
         <div class="box-img">
           <img src="../assets/world.jpeg" />
         </div>
@@ -13,8 +13,8 @@
         <div class="box-img">
           <img src="../assets/7.jpeg" />
         </div>
-      </div>
-      <div class="column">
+      <!-- </div> -->
+      <!-- <div class="column"> -->
         <div class="box-img">
           <img src="../assets/2.jpeg" />
         </div>
@@ -24,8 +24,8 @@
         <div class="box-img">
           <img src="../assets/8.jpeg" />
         </div>
-      </div>
-      <div class="column">
+      <!-- </div> -->
+      <!-- <div class="column"> -->
         <div class="box-img">
           <img src="../assets/3.jpeg" />
         </div>
@@ -35,11 +35,11 @@
         <div class="box-img">
           <img src="../assets/9.jpeg" />
         </div>
-      </div>
+      <!-- </div> -->
     </section>
   </section>
-  <a (click)="goToForm()" class="link_button" routerLink="feedback-and-chat"
+  <a class="link_button" routerLink="feedback-and-chat"
     >Find out more about these guys!</a
   >
-  <router-outlet></router-outlet>
+  <router-outlet (activate)=onActive($event)></router-outlet>
 </article>

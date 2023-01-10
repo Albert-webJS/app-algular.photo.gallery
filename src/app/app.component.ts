@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FeedbackAndChatComponent } from 'src/components/feedback-and-chat/feedback-and-chat.component';
@@ -15,8 +15,7 @@ export class AppComponent {
   title = 'page-example.project_sa';
 
 
-
-  goToForm(): void {
-    document.body.scrollTop = document.body.scrollHeight;
+  onActive(templateForm: FeedbackAndChatComponent) {
+    console.log("child component: ", templateForm.scrolToComponent())
   }
 }

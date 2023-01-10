@@ -1,4 +1,4 @@
-import { Component, inject, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, inject, CUSTOM_ELEMENTS_SCHEMA, OnInit, TemplateRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
@@ -31,6 +31,10 @@ export class FeedbackAndChatComponent implements OnInit {
     email: '',
     comments: ''
   });
+
+  scrolToComponent() {
+    document.querySelector('.container')?.scrollIntoView({ block: 'end' })
+  }
 
   onSubmit(): void {
     this.showMsg = true;

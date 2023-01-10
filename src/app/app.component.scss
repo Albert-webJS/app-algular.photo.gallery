@@ -20,17 +20,8 @@ h2 {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
-  margin-bottom: 10px;
-}
-
-/*   Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 8px;
-  padding: 0 4px;
 }
 
 .box-img {
@@ -39,7 +30,7 @@ h2 {
   overflow: hidden;
 }
 
-.column img {
+.box-img img {
   width: 100%;
   min-height: 250px;
   -webkit-filter: brightness(80%);
@@ -75,14 +66,14 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
-  .column {
+  .box-img {
     flex: 50%;
     max-width: 50%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .column {
+@media screen and (max-width: 700px) {
+  .box-img {
     flex: 100%;
     max-width: 100%;
   }
