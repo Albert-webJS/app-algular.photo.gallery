@@ -34,7 +34,7 @@ export class FeedbackAndChatComponent implements OnInit {
 
   @ViewChild('temlateForm') temlateForm!: ElementRef<HTMLFormElement>
   ngAfterViewInit() {
-    this.temlateForm.nativeElement.scrollIntoView({ behavior: 'smooth'});
+    this.temlateForm.nativeElement.scrollIntoView({ block: 'end' });
   }
 
   onSubmit(): void {

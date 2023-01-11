@@ -5,6 +5,29 @@ article {
   flex-direction: column;
   font-family: "Raleway";
 }
+.mainTitle,
+.subTitle {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.mainTitle {
+  margin-bottom: 0;
+  background-image: linear-gradient(
+    135deg,
+    rgb(32, 56, 163),
+    rgb(184, 38, 197)
+  );
+}
+
+.subTitle {
+  background-image: linear-gradient(
+    270deg,
+    rgb(32, 56, 163),
+    rgb(184, 38, 197)
+  );
+}
 
 h1 {
   color: #4479ba;
@@ -38,7 +61,7 @@ h2 {
   transition: 0.25s;
 }
 
-.column img:hover {
+.box-img img:hover {
   cursor: pointer;
   transform: scale(1.1);
   -webkit-filter: brightness(100%);
