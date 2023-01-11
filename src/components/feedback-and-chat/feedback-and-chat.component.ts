@@ -1,4 +1,4 @@
-import { Component, inject, CUSTOM_ELEMENTS_SCHEMA, OnInit, TemplateRef } from '@angular/core';
+import { Component, inject, CUSTOM_ELEMENTS_SCHEMA, OnInit, TemplateRef, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
@@ -32,8 +32,9 @@ export class FeedbackAndChatComponent implements OnInit {
     comments: ''
   });
 
-  scrolToComponent() {
-    document.querySelector('.container')?.scrollIntoView({ block: 'end' })
+  @ViewChild('temlateForm') temlateForm!: ElementRef<HTMLFormElement>
+  ngAfterViewInit() {
+    this.temlateForm.nativeElement.scrollIntoView({ behavior: 'smooth'});
   }
 
   onSubmit(): void {

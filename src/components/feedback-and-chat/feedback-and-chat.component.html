@@ -4,7 +4,7 @@
     animals in the photos
   </h2>
   <section class="container">
-    <form ngNativeValidate [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form #temlateForm ngNativeValidate class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="row" *ngIf="showMsg">
         <div class="row">
           <p>
